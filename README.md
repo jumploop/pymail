@@ -1,5 +1,5 @@
 # pymail
-关于python3 邮件相关的内容治理
+关于python3 邮件相关的内容整理
 
 
 
