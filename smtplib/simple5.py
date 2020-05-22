@@ -14,7 +14,7 @@ from email.mime.application import MIMEApplication
 def add_attachment(email_attachment_address, msgRoot):
     # 添加附件
     for path in email_attachment_address:
-        if path.endswith(('.jpg', 'png')):
+        if path.endswith(('.jpg', '.png')):
             # jpg
             picture_name = path.split('\\')[-1]
             part = MIMEApplication(open(path, 'rb').read())
