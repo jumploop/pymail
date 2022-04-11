@@ -64,11 +64,7 @@ def send_email(email_subject, email_content, email_attachment_address, email_rec
     msgRoot = MIMEMultipart()
     msgRoot['Subject'] = email_subject
     msgRoot['From'] = sender
-    if len(receivers) > 1:
-        msgRoot['To'] = ';'.join(receivers)  # 群发邮件
-    else:
-        msgRoot['To'] = receivers[0]
-
+    msgRoot['To'] = ';'.join(receivers) if len(receivers) > 1 else receivers[0]
     part = MIMEText(email_content)
     msgRoot.attach(part)
 

@@ -47,7 +47,7 @@ def main():
         server.quit()
         print("邮件发送成功！")
     except Exception as e:
-        print("失败：" + str(e))
+        print(f"失败：{str(e)}")
 
 
 if __name__ == '__main__':
